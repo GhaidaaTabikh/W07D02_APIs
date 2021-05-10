@@ -80,11 +80,16 @@ app.post("/create/user", (req, res) => {
   // res.json({ name, age })
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
-
 app.get("/first-user",(req, res)=>{
     res.status(200)
     res.json(users[0])
 })
+
+app.get("/",(req, res)=>{
+    res.send("hello world")
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
+
